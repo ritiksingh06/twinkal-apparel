@@ -47,6 +47,11 @@ const observer = new IntersectionObserver(
 
 revealEls.forEach((el) => observer.observe(el));
 
+document.querySelectorAll('.video-card video').forEach((videoEl) => {
+  videoEl.defaultMuted = true;
+  videoEl.muted = true;
+});
+
 const testimonialSlider = document.querySelector('.testimonial-slider');
 const testimonialTrack = document.querySelector('.testimonial-track');
 const testimonialPrevBtn = document.querySelector('.testimonial-prev');

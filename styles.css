@@ -544,6 +544,11 @@ h3 {
   color: #674a54;
 }
 
+.footer-link {
+  display: block;
+  margin-bottom: 6px;
+}
+
 .footer-link:hover,
 .footer-link:focus-visible {
   color: #922a4a;
