@@ -358,6 +358,20 @@
       </div>
     </section>
 
+    <section class="section feedback-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Customer Voices</p>
+          <h2>What Our Customers Feel</h2>
+        </div>
+        <div class="feedback-header reveal">
+          <p>Share your experience and help other women discover their next favorite outfit.</p>
+          <button class="btn btn-primary feedback-open" type="button">Give Feedback</button>
+        </div>
+        <div class="feedback-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section class="section testimonials">
       <div class="container">
         <div class="section-head reveal">
@@ -400,6 +414,63 @@
     </section>
   </main>
 
+  <div class="feedback-modal" id="feedbackModal" aria-hidden="true">
+    <div class="feedback-modal-backdrop" data-close="feedback-modal"></div>
+    <div class="feedback-modal-card" role="dialog" aria-modal="true" aria-labelledby="feedbackModalTitle">
+      <div class="feedback-modal-header">
+        <h3 id="feedbackModalTitle">Share Your Feedback</h3>
+        <button class="feedback-close" type="button" aria-label="Close feedback form">×</button>
+      </div>
+      <form class="feedback-form" id="feedbackForm">
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>City</span>
+            <input type="text" name="city" placeholder="Your city" required />
+          </label>
+        </div>
+
+        <label>
+          <span>How was your experience?</span>
+          <select name="product" required>
+            <option value="">Select an option</option>
+            <option value="Kurta Set">Kurta Set</option>
+            <option value="Co-ord Set">Co-ord Set</option>
+            <option value="Ethnic Wear">Ethnic Wear</option>
+            <option value="Shopping Experience">Shopping Experience</option>
+            <option value="Customer Support">Customer Support</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <div class="rating-block">
+          <span>Your rating</span>
+          <div class="star-rating" aria-label="Customer rating">
+            <button type="button" class="star is-active" data-value="1" aria-label="1 star">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+          </div>
+          <input type="hidden" name="rating" value="5" />
+        </div>
+
+        <label>
+          <span>Your feedback</span>
+          <textarea name="message" rows="4" maxlength="300" placeholder="Tell us about your experience with the fit, fabric, delivery, or service." required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn btn-outline" type="button" data-close="feedback-modal">Cancel</button>
+          <button class="btn btn-primary" type="submit">Submit Feedback</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <footer class="footer section" id="contact">
     <div class="container footer-grid">
       <div>
@@ -421,6 +492,7 @@
       <div>
         <h3>Catalog</h3>
         <a class="footer-link" href="Twinkal_Apparel_Catalog_Final.pdf" target="_blank" rel="noopener noreferrer">View Full Catalog PDF</a>
+        <button class="footer-feedback-btn feedback-open" type="button">Give Feedback</button>
       </div>
     </div>
 
